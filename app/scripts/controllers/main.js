@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the marvelApiApp
  */
-angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService', function ($scope, marvelService) {
+angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService', '$location', function ($scope, marvelService, $location) {
   $scope.personagens = [];
 
   function init() {
@@ -17,4 +17,8 @@ angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService'
   }
 
   init();
+
+  $scope.go = function ( path ) {
+    $location.path( path );
+  };
 }]);

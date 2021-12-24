@@ -3,8 +3,8 @@
 angular.module('marvelApiApp').factory('marvelService', ['$http', function($http){
   let params = {
     apikey: "5a237863b3cc2061003cbbc4fe20dc06",
-    ts: "1640269956",
-    hash: "fa182bfdf5df06aea2a53b27960314db"
+    ts: "1640300267",
+    hash: "62bcf6c33da9e0c890f09264f70760e7"
   };
 
   function buscarPersonagens(){

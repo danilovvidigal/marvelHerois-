@@ -24,6 +24,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/:id', {
+        templateUrl: 'views/detalhe-personagem.html',
+        controller: 'DetalheCtrl',
+        controllerAs: 'main'
+      })
       .otherwise({
         redirectTo: '/'
       });

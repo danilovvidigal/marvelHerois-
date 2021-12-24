@@ -2,38 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Marvel Studios API</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="marvelApiApp">
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">marvelApi</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <img class="marvel" src="images/marvel.jpg" ng-click="go('/')">
     </div>
 
-    <div class="container">
-      <div ng-view=""></div>
+    <div class="col-sm-12">
+      <div class="d-flex flex-row" ng-view=""></div>
     </div>
 
     <div class="footer">
@@ -63,7 +43,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/service/marvel-service.js"></script>
+    <script src="scripts/controllers/detalhe.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
 </body>
 </html>
