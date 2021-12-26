@@ -7,7 +7,6 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-const path = require("path");
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
@@ -336,7 +335,7 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
-        },, {
+        }, {
           expand: true,
           dest: '<%= yeoman.dist %>',
           cwd: 'heroku',
