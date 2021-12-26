@@ -43,7 +43,8 @@
     "restangular": "^1.6.1"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "resolutions": {
     "graceful-fs": "^4.2.4"
