@@ -9,10 +9,10 @@
  */
 angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService', '$location', function ($scope, marvelService, $location) {
   $scope.personagens = [];
-  $scope.busca = "";
+  $scope.busca = '';
 
   function init() {
-    marvelService.buscarPersonagens().then(res => {
+    marvelService.buscarPersonagens().then(function(res) {
       $scope.personagens = res.data.data.results;
     });
   }
@@ -24,7 +24,7 @@ angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService'
   };
 
   $scope.buscarPorNome = function () {
-    marvelService.buscarPersonagensPorNome($scope.busca).then(res => {
+    marvelService.buscarPersonagensPorNome($scope.busca).then(function(res) {
       $scope.personagens = res.data.data.results;
     });
   };

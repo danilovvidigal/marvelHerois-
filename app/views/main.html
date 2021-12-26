@@ -1,21 +1,21 @@
-<div class="container">
-  <div class="col-sm-10">
-    <input type="text" class="form-control" ng-model="busca">
-  </div>
 
-  <div class="col-sm-2">
-    <button class="btn btn-primary" ng-click="buscarPorNome()">Buscar</button>
-  </div>
-</div>
-
-<div class="d-flex flex-row col-sm-12">
-  <div ng-click="go('/' + item.id)" class="meu-parceiro col-sm-3" ng-repeat="item in personagens">
-    <div class="panel panel-default">
-      <div class="panel-heading text-center">{{item.name}}</div>
+<div class="container-fluid">
+  <div class="mb-5 mt-5">
+    <div class="col-sm-11">
+      <input type="text" class="form-control" placeholder="Busque aqui seu personagem Marvel" ng-model="busca">
     </div>
 
-    <div class="panel-body">
-      <img class="card-img-top" src="{{item.thumbnail.path + '.' + item.thumbnail.extension}}" alt="Card image cap">
+    <div class="col-sm-1 ">
+      <button class="btn btn-primary float-right" ng-click="buscarPorNome()">Buscar</button>
+    </div>
+  </div>
+
+
+  <div class="d-flex flex-row col-sm-12">
+    <div ng-click="go('/' + item.id)" class="p-5 col-sm-3" ng-repeat="item in personagens">
+       <img class="card-img-top" src="{{item.thumbnail.path + '.' + item.thumbnail.extension}}" alt="Card image cap">
+        <div class="texto-personagem">{{item.name}}</div>
+      </div>
     </div>
   </div>
 </div>

@@ -11,7 +11,7 @@ angular.module('marvelApiApp').controller('DetalheCtrl', ['$scope', 'marvelServi
   $scope.personagem = [];
 
   function init() {
-    marvelService.buscarPersonagensPorId($routeParams.id).then(res => {
+    marvelService.buscarPersonagensPorId($routeParams.id).then(function(res) {
       $scope.personagem = res.data.data.results[0];
     });
   }

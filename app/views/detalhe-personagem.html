@@ -1,44 +1,51 @@
-<div class="row col-sm-12">
-  <div class="col-sm-6">
-    <img class="card-img-top" src="{{personagem.thumbnail.path + '.' + personagem.thumbnail.extension}}" alt="Card image cap">
-  </div>
+<div class="conteudo">
+  <div class="container-xs-conteudo row">
+    <div class="mt-5" style="height: 438px">
+      <div class="col-sm-6">
+        <img class="card-img-top" src="{{personagem.thumbnail.path + '.' + personagem.thumbnail.extension}}" alt="Card image cap">
+      </div>
 
-  <div class="col-sm-6">
-    <h5 class="card-title text-center">{{personagem.name}}</h5>
-    <p> {{ personagem.description }}</p>
-  </div>
-</div>
-
-<div class="col-sm-12" style="margin-top: 20px">
-  <div class="panel panel-default">
-    <div class="panel-heading">Informacoes</div>
-    <div class="panel-body">
-      <div class="col-sm-12">
-        <div class="col-sm-4">
-          <h5 class="card-title text-center">Quadrinhos</h5>
-          <ul class="list-group">
-            <li class="list-group-item" ng-repeat="comics in personagem.comics.items">{{comics.name}}</li>
-          </ul>
-        </div>
-
-        <div class="col-sm-4">
-          <h5 class="card-title text-center">Series</h5>
-          <ul class="list-group">
-            <li class="list-group-item" ng-repeat="comics in personagem.series.items">{{comics.name}}</li>
-          </ul>
-        </div>
-
-        <div class="col-sm-4">
-          <h5 class="card-title text-center">Eventos</h5>
-          <ul class="list-group">
-            <li class="list-group-item" ng-repeat="comics in personagem.events.items">{{comics.name}}</li>
-          </ul>
+      <div class="col-sm-6 h-100">
+        <div class="caixa-principal">
+          <h1 class="text-center">{{personagem.name}}</h1>
+          <p class="text-center"> {{ personagem.description }}</p>
         </div>
       </div>
     </div>
-  </div>
 
-  <div>
-    <button class="btn btn-primary" ng-click="go('/')">Voltar</button>
+
+    <div class="col-sm-12 mt-5" >
+      <div class="panel panel-default">
+        <div class="panel-heading">Informacoes</div>
+        <div class="panel-body">
+          <div class="col-sm-12">
+            <div class="col-sm-4">
+              <h5 class="card-title text-center">Quadrinhos</h5>
+              <ul class="list-group">
+                <li class="list-group-item" ng-repeat="comics in personagem.comics.items">{{comics.name}}</li>
+              </ul>
+            </div>
+
+            <div class="col-sm-4">
+              <h5 class="card-title text-center">Series</h5>
+              <ul class="list-group">
+                <li class="list-group-item" ng-repeat="comics in personagem.series.items">{{comics.name}}</li>
+              </ul>
+            </div>
+
+            <div class="col-sm-4">
+              <h5 class="card-title text-center">Eventos</h5>
+              <ul class="list-group">
+                <li class="list-group-item" ng-repeat="comics in personagem.events.items">{{comics.name}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-primary" ng-click="go('/')">Voltar</button>
+      </div>
+    </div>
   </div>
 </div>
