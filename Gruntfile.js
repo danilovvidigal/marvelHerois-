@@ -7,6 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
+const path = require("path");
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
@@ -198,7 +199,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath: /\.\.\//
+        ignorePath:  /\.\.\//
       },
     },
 
@@ -224,8 +225,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
-              css: ['cssmin']
+              js: ['concat'],
             },
             post: {}
           }
@@ -248,28 +248,6 @@ module.exports = function (grunt) {
           js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
         }
       }
-    },
-
-    cssmin: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css'
-          ]
-        }
-      }
-    },
-    uglify: {
-      dist: {
-        files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
-          ]
-        }
-      }
-    },
-    concat: {
-      dist: {}
     },
 
     imagemin: {
@@ -358,7 +336,7 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
-        }, {
+        },, {
           expand: true,
           dest: '<%= yeoman.dist %>',
           cwd: 'heroku',
@@ -446,8 +424,6 @@ module.exports = function (grunt) {
     'ngAnnotate',
     'copy:dist',
     'cdnify',
-    'cssmin',
-    'uglify',
     'filerev',
     'usemin',
     'htmlmin'
