@@ -9,14 +9,6 @@ body {
   padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
@@ -177,4 +169,14 @@ body {
 
 .mt-5 {
   margin-top: 15px;
+}
+
+.largura-descricao {
+  height: 438px
+}
+
+@media screen and (min-width: 480px) {
+  .largura-descricao {
+    height: auto
+  }
 }
