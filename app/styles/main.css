@@ -175,8 +175,27 @@ body {
   height: 438px
 }
 
+.campo-buscar {
+  width: 95%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
 @media screen and (max-width: 480px) {
   .largura-descricao {
     height: auto
+  }
+
+  .campo-buscar {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .campo-buscar {
+    width: 75%;
   }
 }
