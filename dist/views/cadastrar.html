@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="row vertical-offset-100">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Cadastre-se</h3>
+        </div>
+        <div class="panel-body">
+          <form accept-charset="UTF-8" role="form">
+            <fieldset>
+              <div class="form-group">
+                <input class="form-control" placeholder="Nome" ng-model="user.nome" name="email" type="text" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Login" ng-model="user.login" name="email" type="text" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Senha" ng-model="user.token" name="password" type="password" required>
+              </div>
+              <input class="btn btn-lg btn-success btn-block" type="button" ng-click="cadastrar()" value="Cadastrar">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

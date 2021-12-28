@@ -335,6 +335,7 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp}',
             'styles/{,*/}*.*',
             'scripts/{,*/}*.*',
+            'interceptor/{,*/}*.*',
             'views/{,*/}*.*',
             '../bower_components/{,*/}*.*',
           ]

@@ -1,20 +1,16 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name marvelApiApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the marvelApiApp
- */
-angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService', '$location', function ($scope, marvelService, $location) {
+angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService', '$location', 'AuthService', function ($scope, marvelService, $location, AuthService) {
   $scope.personagens = [];
   $scope.busca = '';
+  $scope.usuarioLogado = null;
 
   function init() {
     marvelService.buscarPersonagens().then(function(res) {
       $scope.personagens = res.data.data.results;
     });
+
+    $scope.usuarioLogado = AuthService.retornaUsuarioLogado();
   }
 
   init();

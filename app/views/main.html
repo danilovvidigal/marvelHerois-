@@ -1,7 +1,12 @@
 <div class="container-fluid">
   <div class="mb-5 mt-5 overflow-hidden">
+    <div class="jumbotron" ng-if="usuarioLogado">
+      <h1>Bem vindo {{usuarioLogado}}</h1>
+      <p> <a ng-click="go('/logout')"> logout </a> </p>
+    </div>
+
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Busque aqui seu personagem Marvel">
+      <input type="text" class="form-control" ng-model="busca" placeholder="Busque aqui seu personagem Marvel">
       <span class="input-group-btn">
         <button class="btn btn-primary" type="button" ng-click="buscarPorNome()">Buscar</button>
       </span>

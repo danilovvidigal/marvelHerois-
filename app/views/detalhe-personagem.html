@@ -1,4 +1,9 @@
 <div class="conteudo">
+  <div class="jumbotron" ng-if="usuarioLogado">
+    <h1>Bem vindo {{usuarioLogado}}</h1>
+    <p><a ng-click="go('/logout')"> logout </a> </p>
+  </div>
+
   <div class="container-xs-conteudo row">
     <div class="mt-5 largura-descricao overflow-hidden">
       <div class="col-sm-6">
