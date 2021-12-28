@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('marvelApiApp').controller('DetalheCtrl', ['$scope', 'marvelService', '$routeParams', '$location', 'AuthService', function ($scope, marvelService, $routeParams, $location, AuthService) {
+angular.module('marvelApiApp').controller('DetalheCtrl', ['$scope', 'marvelService', '$routeParams', '$location', 'AuthService', '$window', function ($scope, marvelService, $routeParams, $location, AuthService, $window) {
   $scope.personagem = [];
   $scope.usuarioLogado = null;
 
@@ -16,5 +16,9 @@ angular.module('marvelApiApp').controller('DetalheCtrl', ['$scope', 'marvelServi
 
   $scope.go = function ( path ) {
     $location.path( path );
+  };
+
+  $scope.voltar = function () {
+    $window.location.href = '/';
   };
 }]);

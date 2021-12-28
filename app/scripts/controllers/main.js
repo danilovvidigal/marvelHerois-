@@ -21,6 +21,7 @@ angular.module('marvelApiApp').controller('MainCtrl', ['$scope', 'marvelService'
 
   $scope.buscarPorNome = function () {
     marvelService.buscarPersonagensPorNome($scope.busca).then(function(res) {
+      $scope.busca = '';
       $scope.personagens = res.data.data.results;
     });
   };
