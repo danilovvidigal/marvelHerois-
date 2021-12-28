@@ -15,7 +15,7 @@
 
 
   <div class="d-flex flex-row col-sm-12">
-    <div ng-click="go('/' + item.id)" class="p-5 col-sm-12 col-md-12 col-lg-3" ng-repeat="item in personagens">
+    <div ng-click="go('/' + item.id)" class="p-5 col-xs-12 col-sm-12 col-md-12 col-lg-3" ng-repeat="item in personagens">
        <img class="card-img-top" src="{{item.thumbnail.path + '.' + item.thumbnail.extension}}" alt="Card image cap">
         <div class="texto-personagem">{{item.name}}</div>
       </div>
